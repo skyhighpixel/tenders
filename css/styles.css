@@ -1,0 +1,15 @@
+.panel-group .panel {
+	margin-bottom: 10px;
+}
+
+.panel[data-edit-mode="0"] input:not([type="radio"]), 
+.panel[data-edit-mode="0"] textarea,
+.panel[data-edit-mode="0"] button[type="submit"],
+.panel[data-edit-mode="0"] span.cancel-btn {
+	display: none;
+}
+
+.panel[data-edit-mode="1"] p,
+.panel[data-edit-mode="1"] span.edit-btn {
+	display: none;
+}
