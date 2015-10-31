@@ -4,8 +4,11 @@
     <title></title>
     <?php include 'widgets/common.php'; ?>
     <script src="js/edit.js"></script>
+    <script type="text/template" class="edit-template">
+        <?php include 'template/edit.php'; ?>
+    </script>
 </head>
-<body class="">
+<body>
     <div class="container">
         <div class="page-header">
             <h1>Moderate Tenders</h1>
@@ -13,9 +16,6 @@
         <div class="row">
             <div>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <script type="text/template" class="edit-template">
-                       <?php include 'template/edit.php'; ?>
-                    </script>
                 </div>
             </div>
         </div>
