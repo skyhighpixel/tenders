@@ -1,6 +1,6 @@
 <% tenders.map(function(tender) { %>
 <form class="edit-tender">
-	<div class="panel panel-primary tender-panel" data-tender-id="<%- tender.id %>" data-edit-mode="0">
+	<div class="panel <% tender.live == 1 ? print ('panel-success') : print ('panel-danger'); %> tender-panel" data-tender-id="<%- tender.id %>" data-edit-mode="0">
 		<div class="panel-heading" role="tab" id="heading<%- tender.id %>">
 			<h4 class="panel-title">
 				<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%- tender.id %>" aria-expanded="true" aria-controls="collapse<%- tender.id %>">
@@ -66,7 +66,7 @@
 						<tr>
 							<th class="col-xs-2">Category</th>
 							<td class="col-xs-10"><p class="category-text"><%- tender.category %></p>
-								<input type="text" class="form-control" name="category" value="${category}"/>	
+								<input type="text" class="form-control" name="category" value="<%- tender.category %>"/>	
 							</td>
 						</tr>
 						<tr>
@@ -90,7 +90,7 @@
 						</tr>
 					</table>
 					<div>
-						<button type="submit" class="btn btn-success">Save</button>
+						<button type="submit" class="btn btn-success">Save&nbsp;<i class="fa fa-save"></i></button>
 						<span class="btn btn-default cancel-btn">Cancel</span>
 					</div>
 					<div class="edit-message"></div>
